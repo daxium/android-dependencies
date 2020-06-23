@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' } // For Spoon snapshot, until 2.0.0 is released
+    }
+
+    dependencies {
+        classpath Dependencies.gradleTools
+        classpath Dependencies.kotlinGradlePlugin
+        //classpath "com.google.gms:google-services:4.3.3"
+        classpath "io.sentry:sentry-android-gradle-plugin:1.7.19"
+        //classpath "com.github.triplet.gradle:play-publisher:2.6.2"
+        classpath 'com.jaredsburrows:gradle-spoon-plugin:1.5.0'
+    }
+}
+
+plugins {
+    id "com.github.ben-manes.versions" version "0.28.0"
+}
+
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+
+dependencyUpdates {
+    checkForGradleUpdate = false
+    resolutionStrategy {
+        componentSelection { rules ->
+            rules.all { ComponentSelection selection ->
+                boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm', 'preview'].any { qualifier ->
+                    selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+                }
+                if (rejected) {
+                    selection.reject('Release candidate')
+                }
+            }
+        }
+    }
+}
