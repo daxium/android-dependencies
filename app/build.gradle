@@ -1,13 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 apply plugin: "com.android.application"
-//apply plugin: "com.github.triplet.play"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
 apply plugin: "kotlin-kapt"
-apply plugin: "io.sentry.android.gradle"
 apply plugin: "com.jaredsburrows.spoon"
-apply from: "dep.gradle"
 
 
 android {
@@ -54,6 +51,15 @@ android {
         abi { enableSplit = true }
     }
 
+    packagingOptions {
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE.md'
+        exclude 'META-INF/LICENSE-notice.md'
+        exclude 'META-INF/metadata.kotlin_module'
+        exclude 'META-INF/metadata.jvm.kotlin_module'
+        exclude 'META-INF/gradle/incremental.annotation.processors'
+    }
 }
 
 
@@ -64,6 +70,9 @@ tasks.withType(KotlinCompile).all {
 }
 
 repositories {
+    google()
+    mavenCentral()
+    jcenter()
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
@@ -74,4 +83,176 @@ configurations {
     compile.exclude group: 'org.jetbrains.kotlin' , module: 'kotlin-android-extensions'
 }
 
-//apply plugin: "com.google.gms.google-services"
+
+
+
+
+
+dependencies {
+
+    coreLibraryDesugaring Dependencies.desugarJdkLib
+    implementation Dependencies.firebaseAnalytics
+    implementation Dependencies.firebaseMessaging
+    implementation Dependencies.junit5
+    implementation Dependencies.junitEngine
+    implementation Dependencies.junitParams
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.koinAndroidViewModel
+    implementation Dependencies.koinAndroidXScope
+    implementation Dependencies.koinTest
+    implementation Dependencies.kotlinCoroutinesAndroid
+    implementation Dependencies.kotlinCoroutinesCore
+    implementation Dependencies.kotlinCoroutineTest
+    implementation Dependencies.kotlinCoroutineTest 
+    implementation Dependencies.kotlinJunit
+    implementation Dependencies.kotlinReflect
+    implementation Dependencies.kotlinStdlib
+    implementation Dependencies.kotlinStdlibJdk8
+    //implementation Dependencies.lint
+    //implementation Dependencies.lintApi
+    //implementation Dependencies.lintTests
+    implementation Dependencies.mockito
+    implementation Dependencies.mockWebServer
+    implementation Dependencies.moshi
+    implementation Dependencies.moshiAdapters
+    implementation Dependencies.moshiCodegen
+    implementation Dependencies.moshiKotlin
+    implementation Dependencies.okHttp
+    implementation Dependencies.okHttpLogging
+    implementation Dependencies.picasso
+    implementation Dependencies.playCore
+    implementation Dependencies.playServicesGCM
+    implementation Dependencies.playServicesLoc
+    implementation Dependencies.playServicesMaps
+    implementation Dependencies.playServicesUtils
+    implementation Dependencies.retrofit
+    implementation Dependencies.retrofitCoroutines
+    implementation Dependencies.retrofitMoshi
+    // implementation Dependencies.robolectric
+    implementation Dependencies.timber
+    implementation Dependencies.xActivity
+    implementation Dependencies.xAnnotation
+    implementation Dependencies.xAppCompat
+    implementation Dependencies.xArchCoreCommon
+    implementation Dependencies.xArchCoreRuntime
+    implementation Dependencies.xArchCoreTesting
+    implementation Dependencies.xAsyncLayoutInflater
+    implementation Dependencies.xBrowser
+    implementation Dependencies.xCardview
+    implementation Dependencies.xCollection
+    implementation Dependencies.xConstraintLayout
+    implementation Dependencies.xConstraintLayoutSolver
+    implementation Dependencies.xContentpager
+    implementation Dependencies.xCoordinatorLayout
+    implementation Dependencies.xCore
+    implementation Dependencies.xCoreKtx
+    implementation Dependencies.xCursorAdapter
+    implementation Dependencies.xCustomView
+    implementation Dependencies.xDatabindingAdapters
+    implementation Dependencies.xDatabindingCommon
+    implementation Dependencies.xDatabindingCompiler
+    implementation Dependencies.xDatabindingRuntime
+    implementation Dependencies.xDocumentFile
+    implementation Dependencies.xDrawerLayout
+    implementation Dependencies.xDynamicAnimation
+    implementation Dependencies.xEmoji
+    implementation Dependencies.xEmojiAppcompat
+    implementation Dependencies.xEmojiBundled
+    implementation Dependencies.xEspressoAccessibility
+    implementation Dependencies.xEspressoContrib
+    implementation Dependencies.xEspressoCore
+    implementation Dependencies.xEspressoCore
+    implementation Dependencies.xEspressoIdlingNet
+    implementation Dependencies.xEspressoIdlingResource
+    implementation Dependencies.xEspressoIntents
+    implementation Dependencies.xEspressoRemote
+    implementation Dependencies.xEspressoWeb
+    implementation Dependencies.xExifInterface
+    implementation Dependencies.xFragment
+    implementation Dependencies.xFragmentTesting
+    implementation Dependencies.xGridLayout
+    implementation Dependencies.xInterpolator
+    implementation Dependencies.xLeanback
+    implementation Dependencies.xLeanbackPreference
+    implementation Dependencies.xLegacyCoreUi
+    implementation Dependencies.xLegacyCoreUtils
+    implementation Dependencies.xLegacyPreference
+    implementation Dependencies.xLegacyV13
+    implementation Dependencies.xLegacyV4
+    implementation Dependencies.xLifecycleCommon
+    implementation Dependencies.xLifecycleCommonJava8
+    implementation Dependencies.xLifecycleCompiler
+    implementation Dependencies.xLifecycleExtensions
+    implementation Dependencies.xLifecycleLivedata
+    implementation Dependencies.xLifecycleLivedataCore
+    implementation Dependencies.xLifecycleLivedataKtx
+    implementation Dependencies.xLifecycleReactiveStreams
+    implementation Dependencies.xLifecycleRuntime
+    implementation Dependencies.xLifecycleRuntimeKtx
+    implementation Dependencies.xLifecycleViewModel
+    implementation Dependencies.xLoader
+    implementation Dependencies.xLocalBroadcastManager
+    implementation Dependencies.xMaterial
+    implementation Dependencies.xMedia
+    implementation Dependencies.xMedia2
+    implementation Dependencies.xMedia2Exoplayer
+    implementation Dependencies.xMediaRouter
+    implementation Dependencies.xMultidex
+    implementation Dependencies.xNavigationFragment
+    implementation Dependencies.xNavigationFragmentKtx
+    // implementation Dependencies.xNavigationSafeArgsPlugin
+    implementation Dependencies.xNavigationTesting
+    implementation Dependencies.xNavigationUi
+    implementation Dependencies.xNavigationUiKtx
+    implementation Dependencies.xPagingCommon
+    implementation Dependencies.xPagingRuntime
+    implementation Dependencies.xPagingRxJava2
+    implementation Dependencies.xPalette
+    implementation Dependencies.xPercentLayout
+    implementation Dependencies.xPreference
+    implementation Dependencies.xPrint
+    implementation Dependencies.xRecommendation
+    implementation Dependencies.xRecyclerView
+    implementation Dependencies.xRecyclerViewSelection
+    implementation Dependencies.xRoomCommon
+    implementation Dependencies.xRoomCompiler
+    implementation Dependencies.xRoomCoroutines
+    implementation Dependencies.xRoomGuava
+    implementation Dependencies.xRoomMigration
+    implementation Dependencies.xRoomRuntime
+    implementation Dependencies.xRoomRxJava2
+    implementation Dependencies.xRoomTesting
+    implementation Dependencies.xSliceBuilders
+    implementation Dependencies.xSliceCore
+    implementation Dependencies.xSliceView
+    implementation Dependencies.xSlidingPaneLayout
+    implementation Dependencies.xSqlite
+    implementation Dependencies.xSqliteFramework
+    implementation Dependencies.xSwipeRefreshLayout
+    implementation Dependencies.xTestCore
+    implementation Dependencies.xTestCore
+    implementation Dependencies.xTestExtJUnit
+    implementation Dependencies.xTestExtTruth
+    implementation Dependencies.xTestMonitor
+    implementation Dependencies.xTestOrchestrator
+    implementation Dependencies.xTestRules
+    implementation Dependencies.xTestRunner
+    implementation Dependencies.xTestTruth
+    implementation Dependencies.xTestUiAutomator
+    implementation Dependencies.xTransition
+    implementation Dependencies.xTvProvider
+    implementation Dependencies.xVectorDrawable
+    implementation Dependencies.xVectorDrawableAnimated
+    implementation Dependencies.xVersionedParcelable
+    implementation Dependencies.xViewPager
+    implementation Dependencies.xWebkit
+    implementation Dependencies.xWork
+    implementation Dependencies.xWorkJava
+    implementation Dependencies.xWorkTest
+    kapt Dependencies.xLifecycleCompiler
+    kapt Dependencies.xRoomCompiler
+
+    // pdftron
+    //implementation "com.pdftron:pdftron:8.0.1-alpha03"
+    //implementation "com.pdftron:tools:8.0.1-alpha03"
+}

@@ -11,15 +11,16 @@ buildscript {
     dependencies {
         classpath Dependencies.gradleTools
         classpath Dependencies.kotlinGradlePlugin
-        //classpath "com.google.gms:google-services:4.3.3"
-        classpath "io.sentry:sentry-android-gradle-plugin:1.7.19"
-        //classpath "com.github.triplet.gradle:play-publisher:2.6.2"
+        classpath Dependencies.xNavigationSafeArgsPlugin
+        classpath "com.google.gms:google-services:4.3.4"
+        classpath "io.sentry:sentry-android-gradle-plugin:1.7.36"
+        classpath "com.github.triplet.gradle:play-publisher:3.0.0"
         classpath 'com.jaredsburrows:gradle-spoon-plugin:1.5.0'
     }
 }
 
 plugins {
-    id "com.github.ben-manes.versions" version "0.28.0"
+    id "com.github.ben-manes.versions" version "0.33.0"
 }
 
 
