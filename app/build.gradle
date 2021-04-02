@@ -58,6 +58,7 @@ android {
         exclude 'META-INF/LICENSE-notice.md'
         exclude 'kotlin/kotlin.kotlin_builtins'
         exclude 'META-INF/metadata.kotlin_module'
+        exclude 'META-INF/descriptors.kotlin_module'
         exclude 'META-INF/metadata.jvm.kotlin_module'
         exclude 'META-INF/gradle/incremental.annotation.processors'
     }
