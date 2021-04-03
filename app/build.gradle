@@ -88,10 +88,11 @@ repositories {
 }
 
 configurations {
+    cleanedAnnotations
     compile.exclude group: 'com.android.tools.lint' , module: 'lint-checks'
     compile.exclude group: 'com.android.tools' , module: 'common'
     compile.exclude group: 'org.jetbrains.kotlin' , module: 'kotlin-android-extensions'
-    compile.exclude group: 'org.jetbrains.kotlin' , module: 'kotlin-android-extensions'
+    compile.exclude group: 'org.jetbrains' , module:'annotations'
 }
 
 
