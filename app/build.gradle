@@ -63,6 +63,7 @@ android {
         exclude 'META-INF/util.runtime.kotlin_module'
         exclude 'kotlin/ranges/ranges.kotlin_builtins'
         exclude 'META-INF/deserialization.kotlin_module'
+        exclude 'kotlin/reflect/reflect.kotlin_builtins'
         exclude 'kotlin/internal/internal.kotlin_builtins'
         exclude 'META-INF/kotlinx-coroutines-core.kotlin_module'
         exclude 'META-INF/gradle/incremental.annotation.processors'
