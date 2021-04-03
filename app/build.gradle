@@ -61,6 +61,7 @@ android {
         exclude 'META-INF/descriptors.kotlin_module'
         exclude 'META-INF/metadata.jvm.kotlin_module'
         exclude 'META-INF/deserialization.kotlin_module'
+        exclude 'kotlin/internal/internal.kotlin_builtins'
         exclude 'META-INF/kotlinx-coroutines-core.kotlin_module'
         exclude 'META-INF/gradle/incremental.annotation.processors'
     }
