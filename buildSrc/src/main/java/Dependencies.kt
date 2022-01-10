@@ -7,18 +7,17 @@ object Version {
     const val androidX = "1.0.0"
     const val archComponents = "1.1.1"
     const val archCore = "2.1.0"
-    const val databinding = "3.4.1"
     const val dokka = "0.9.17"
     const val espresso = "3.3.0"
-    const val gradle = "4.1.3"
-    const val junit5 = "5.6.2"
-    const val junit4 = "4.13"
-    const val koin = "2.0.1"
-    const val kotlin = "1.4.31"
-    const val kotlinXCoroutines = "1.4.3"
+    const val gradle = "7.0.1"
+    const val junit5 = "5.7.2"
+    const val junit4 = "4.13.2"
+    const val koin = "3.1.2"
+    const val kotlin = "1.5.31"
+    const val kotlinXCoroutines = "1.5.0"
     const val lifecycle = "2.2.0"
     const val lint = "26.6.3"
-    const val mockito = "2.2.0"
+    const val mockito = "4.0.0"
     const val moshi = "1.8.0"
     const val multidex = "2.0.1"
     const val navigation = "2.3.4"
@@ -26,7 +25,7 @@ object Version {
     const val permissionsDispatcher = "4.1.0"
     const val picasso = "2.8"
     const val retrofit = "2.9.0"
-    const val room = "2.2.5"
+    const val room = "2.3.0"
     const val rxAndroid = "2.1.0"
     const val rxJava = "2.2.2"
     const val test = "1.3.0"
@@ -44,7 +43,7 @@ object Dependencies {
     // see: https://developer.android.com/kotlin/ktx                        for ktx packages
     // see: https://developer.android.com/training/testing/set-up-project   for test packages
     const val xAnnotation = "androidx.annotation:annotation:1.0.1"
-    const val xAppCompat = "androidx.appcompat:appcompat:1.3.0-rc01"
+    const val xAppCompat = "androidx.appcompat:appcompat:1.3.0"
     const val xArchCore = "androidx.arch.core:core:${Version.archCore}"
     const val xArchCoreCommon = "androidx.arch.core:core-common:${Version.archCore}"
     const val xArchCoreRuntime = "androidx.arch.core:core-runtime:${Version.archCore}"
@@ -56,26 +55,18 @@ object Dependencies {
     const val xCardview = "androidx.cardview:cardview:1.0.0"
     const val xCollection = "androidx.collection:collection-ktx:1.0.0"
 
-    const val xConstraintLayout = "androidx.constraintlayout:constraintlayout:2.0.2"
-    const val xConstraintLayoutSolver = "androidx.constraintlayout:constraintlayout-solver:2.0.2"
+    const val xConstraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
+    const val xConstraintLayoutSolver = "androidx.constraintlayout:constraintlayout-solver:2.0.4"
 
     const val xContentpager = "androidx.contentpager:contentpager:1.0.0"
     const val xCoordinatorLayout = "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
-    const val xCore = "androidx.core:core:1.5.0-rc01"
-    const val xCoreKtx = "androidx.core:core-ktx:1.5.0-rc01"
+    const val xCore = "androidx.core:core:1.5.0"
+    const val xCoreKtx = "androidx.core:core-ktx:1.5.0"
     const val xCursorAdapter = "androidx.cursoradapter:cursoradapter:1.0.0"
     const val xCustomView = "androidx.customview:customview:1.0.0"
     const val xDocumentFile = "androidx.documentfile:documentfile:1.0.0"
     const val xDrawerLayout = "androidx.drawerlayout:drawerlayout:1.0.0"
     const val xDynamicAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
-
-    const val xDatabindingAdapters =
-        "androidx.databinding:databinding-adapters:${Version.databinding}"
-    const val xDatabindingCommon = "androidx.databinding:databinding-common:${Version.databinding}"
-    const val xDatabindingCompiler =
-        "androidx.databinding:databinding-compiler:${Version.databinding}"
-    const val xDatabindingRuntime =
-        "androidx.databinding:databinding-runtime:${Version.databinding}"
 
     const val xEmoji = "androidx.emoji:emoji:1.0.0"
     const val xEmojiAppcompat = "androidx.emoji:emoji-appcompat:1.0.0"
@@ -95,9 +86,9 @@ object Dependencies {
 
     const val xExifInterface = "androidx.exifinterface:exifinterface:1.3.1"
 
-    const val xActivity = "androidx.activity:activity-ktx:1.2.1"
-    const val xFragment = "androidx.fragment:fragment-ktx:1.3.1"
-    const val xFragmentTesting = "androidx.fragment:fragment-testing:1.3.1"
+    const val xActivity = "androidx.activity:activity-ktx:1.2.3"
+    const val xFragment = "androidx.fragment:fragment-ktx:1.3.5"
+    const val xFragmentTesting = "androidx.fragment:fragment-testing:1.3.5"
     const val xGridLayout = "androidx.gridlayout:gridlayout:1.0.0"
     const val xHeifWriter = "androidx.heifwriter:heifwriter:1.0.0"
     const val xInterpolator = "androidx.interpolator:interpolator:1.0.0"
@@ -162,7 +153,7 @@ object Dependencies {
     const val xRoomTesting = "androidx.room:room-testing:${Version.room}"
     const val xRoomCoroutines = "androidx.room:room-ktx:${Version.room}"
 
-    const val xSecurity = "androidx.security:security-crypto:1.0.0-beta01"
+    const val xSecurity = "androidx.security:security-crypto:1.0.0"
     const val xSliceBuilders = "androidx.slice:slice-builders:1.0.0"
     const val xSliceCore = "androidx.slice:slice-core:1.0.0"
     const val xSliceView = "androidx.slice:slice-view:1.0.0"
@@ -172,8 +163,8 @@ object Dependencies {
     const val xSwipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
     const val xTestCore = "androidx.test:core:${Version.test}"
-    const val xTestExtJUnit = "androidx.test.ext:junit:1.1.2"
-    const val xTestExtTruth = "androidx.test.ext:truth:1.0.0"
+    const val xTestExtJUnit = "androidx.test.ext:junit:1.1.3"
+    const val xTestExtTruth = "androidx.test.ext:truth:${Version.test}"
     const val xTestMonitor = "androidx.test:monitor:${Version.test}"
     const val xTestOrchestrator = "androidx.test:orchestrator:${Version.test}"
     const val xTestRules = "androidx.test:rules:${Version.test}"
@@ -182,11 +173,14 @@ object Dependencies {
     const val xTestTruth = "com.google.truth:truth:0.43"
 
     // testing
-    const val junit5 = "org.junit.jupiter:junit-jupiter-api:${Version.junit5}"
-    const val junitEngine = "org.junit.jupiter:junit-jupiter-engine:${Version.junit5}"
-    const val junitParams = "org.junit.jupiter:junit-jupiter-params:${Version.junit5}"
-    const val mockito = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Version.mockito}"
-    const val robolectric = "org.robolectric:robolectric:3.8"
+    const val junit4 = "junit:junit:${Version.junit4}"
+    const val junit5Api = "org.junit.jupiter:junit-jupiter-api:${Version.junit5}"
+    const val junit5Engine = "org.junit.jupiter:junit-jupiter-engine:${Version.junit5}"
+    const val junit5VintageEngine = "org.junit.vintage:junit-vintage-engine:${Version.junit5}"
+    const val junit5Params = "org.junit.jupiter:junit-jupiter-params:${Version.junit5}"
+    const val mockito = "org.mockito.kotlin:mockito-kotlin:${Version.mockito}"
+    const val mockitoInline = "org.mockito:mockito-inline:3.11.2"
+    const val robolectric = "org.robolectric:robolectric:4.4"
 
 
     const val xTestUiAutomator = "androidx.test.uiautomator:uiautomator:2.2.0"
@@ -207,7 +201,7 @@ object Dependencies {
     const val playServicesGCM = "com.google.android.gms:play-services-gcm:17.0.0"
     const val playServicesLoc = "com.google.android.gms:play-services-location:17.0.0"
     const val playServicesMaps = "com.google.android.gms:play-services-maps:17.0.0"
-	const val playServicesUtils = "com.google.maps.android:android-maps-utils:0.5"
+    const val playServicesUtils = "com.google.maps.android:android-maps-utils:0.5"
     const val playCore = "com.google.android.play:core:1.6.5"
 
     // Firebase (each one may have different versions, see: https://firebase.google.com/docs/android/setup?authuser=1#available_libraries)
@@ -216,9 +210,12 @@ object Dependencies {
 
     // Kotlin
     const val dokkaGradlePlugin = "org.jetbrains.dokka:dokka-gradle-plugin:${Version.dokka}"
-    const val kotlinCoroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.kotlinXCoroutines}"
-    const val kotlinCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.kotlinXCoroutines}"
-    const val kotlinCoroutineTest  = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Version.kotlinXCoroutines}"
+    const val kotlinCoroutinesCore =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.kotlinXCoroutines}"
+    const val kotlinCoroutinesAndroid =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.kotlinXCoroutines}"
+    const val kotlinCoroutineTest =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Version.kotlinXCoroutines}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.kotlin}"
     const val kotlinJunit = "org.jetbrains.kotlin:kotlin-test-junit:${Version.kotlin}"
     const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${Version.kotlin}"
@@ -226,10 +223,17 @@ object Dependencies {
     const val kotlinStdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Version.kotlin}"
 
     // Koin
-    const val koinAndroid = "org.koin:koin-android:${Version.koin}"
-    const val koinAndroidXScope = "org.koin:koin-androidx-scope:${Version.koin}"
-    const val koinAndroidViewModel = "org.koin:koin-android-viewmodel:${Version.koin}"
-    const val koinTest = "org.koin:koin-test:${Version.koin}"
+    const val koinMultiplatform = "io.insert-koin:koin-core:${Version.koin}"
+    const val koinMultiplatformTest = "io.insert-koin:koin-test:${Version.koin}"
+
+    const val koinJUnit4 = "io.insert-koin:koin-test-junit4:${Version.koin}"
+    const val koinJUnit5 = "io.insert-koin:koin-test-junit5:${Version.koin}"
+    const val koinJVM = "io.insert-koin:koin-core-ext:${Version.koin}"
+
+    const val koinAndroid = "io.insert-koin:koin-android:${Version.koin}"
+    const val koinAndroidExt = "io.insert-koin:koin-android-ext:${Version.koin}"
+    const val koinWorkmanager = "io.insert-koin:koin-androidx-workmanager:${Version.koin}"
+    const val koinCompose = "io.insert-koin:koin-androidx-compose:${Version.koin}"
 
     // linting
     const val lint = "com.android.tools.lint:lint:${Version.lint}"
@@ -243,12 +247,13 @@ object Dependencies {
     const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Version.moshi}"
     const val okHttp = "com.squareup.okhttp3:okhttp:${Version.okHttp}"
     const val okHttpLogging = "com.squareup.okhttp3:logging-interceptor:${Version.okHttp}"
+    const val okio = "com.squareup.okio:okio:3.0.0-alpha.9"
     const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Version.okHttp}"
     const val picasso = "com.squareup.picasso:picasso:${Version.picasso}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofit}"
     const val retrofitCoroutines = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
     const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Version.retrofit}"
-    const val retrofitRxJava = "com.squareup.retrofit2:adapter-rxjava2:${Version.retrofit}"
+    const val retrofitKotlinXSerialization = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
     const val timber = "com.jakewharton.timber:timber:${Version.timber}"
 
     // Permissions dispatcher

@@ -105,13 +105,17 @@ dependencies {
     coreLibraryDesugaring Dependencies.desugarJdkLib
     implementation Dependencies.firebaseAnalytics
     implementation Dependencies.firebaseMessaging
-    implementation Dependencies.junit5
-    implementation Dependencies.junitEngine
-    implementation Dependencies.junitParams
+    implementation Dependencies.junit5Api
+    implementation Dependencies.junit5Engine
+    implementation Dependencies.junit5VintageEngine
+    implementation Dependencies.junit5Params
     implementation Dependencies.koinAndroid
-    implementation Dependencies.koinAndroidViewModel
-    implementation Dependencies.koinAndroidXScope
-    implementation Dependencies.koinTest
+    implementation Dependencies.koinAndroidExt
+    implementation Dependencies.koinJUnit4
+    implementation Dependencies.koinJUnit4
+    implementation Dependencies.koinJVM
+    implementation Dependencies.koinMultiplatform
+    implementation Dependencies.koinMultiplatformTest
     implementation Dependencies.kotlinCoroutinesAndroid
     implementation Dependencies.kotlinCoroutinesCore
     implementation Dependencies.kotlinCoroutineTest
@@ -124,6 +128,7 @@ dependencies {
     //implementation Dependencies.lintApi
     //implementation Dependencies.lintTests
     implementation Dependencies.mockito
+    implementation Dependencies.mockitoInline
     implementation Dependencies.mockWebServer
     implementation Dependencies.moshi
     implementation Dependencies.moshiAdapters
@@ -160,10 +165,6 @@ dependencies {
     implementation Dependencies.xCoreKtx
     implementation Dependencies.xCursorAdapter
     implementation Dependencies.xCustomView
-    implementation Dependencies.xDatabindingAdapters
-    implementation Dependencies.xDatabindingCommon
-    implementation Dependencies.xDatabindingCompiler
-    implementation Dependencies.xDatabindingRuntime
     implementation Dependencies.xDocumentFile
     implementation Dependencies.xDrawerLayout
     implementation Dependencies.xDynamicAnimation
